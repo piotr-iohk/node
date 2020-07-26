@@ -1,0 +1,10 @@
+cardano-node run \
+--topology *-topology.json \
+--config *-config.json \
+--database-path ./db \
+--socket-path ./node.socket \
+--host-addr $1 \
+--port $2 \
+--shelley-kes-key ./pool-keys/kes.skey \
+--shelley-vrf-key ./pool-keys/vrf.skey \
+--shelley-operational-certificate ./pool-keys/node.cert

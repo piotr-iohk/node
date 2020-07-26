@@ -1,0 +1,7 @@
+cardano-node run \
+	--config ./*-config.json \
+  --topology ./*-topology.json \
+	--database-path ./db \
+	--socket-path ./node.socket \
+	--host-addr $1 \
+	--port $2

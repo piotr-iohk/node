@@ -1,0 +1,4 @@
+rm ../relay1/*-config.json ../relay1/*-topology.json ../relay1/*-genesis.json
+rm ../relay2/*-config.json ../relay2/*-topology.json ../relay2/*-genesis.json
+rm ../block-producing/*-config.json ../block-producing/*-topology.json ../block-producing/*-genesis.json
+rm ../wallet/*-genesis.json 

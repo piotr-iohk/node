@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Usage: nodeup VERSION
+#   Switch installed version of cardano-cli and cardano-node,
+#   building them first if necessary.
+#
+# Example:
+#   $ nodeup 1.13.0
+#   $ nodeup origin/master
+set -e
+VERSION=${1?missing version as first argument}
+WORKDIR=~/cardano-node
+DIST=~/.local/bin
+echo "Switching to cardano-node-$VERSION"
+cd $WORKDIR
+if [ ! -d "cardano-node-$VERSION" ]; then
+  git fetch origin
+  git checkout $VERSION
+  nix-build -A haskellPackages.cardano-node.components.exes -o cardano-node-$VERSION
+  nix-build -A haskellPackages.cardano-cli.components.exes -o cardano-cli-$VERSION
+fi
+if [ -f "$DIST/cardano-node" ]; then
+  unlink $DIST/cardano-node
+fi
+ln -T $WORKDIR/cardano-node-$VERSION/bin/cardano-node $DIST/cardano-node
+cardano-node version
+if [ -f "$DIST/cardano-cli" ]; then
+  unlink $DIST/cardano-cli
+fi
+ln -T $WORKDIR/cardano-cli-$VERSION/bin/cardano-cli $DIST/cardano-cli
+cardano-cli version
