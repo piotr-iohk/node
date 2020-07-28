@@ -1,4 +1,4 @@
 cardano-wallet-shelley serve --port $1 \
   --node-socket ../$2/node.socket \
-  --staging *-genesis.json \
+  --mainnet \
   --database ./wallet-db
