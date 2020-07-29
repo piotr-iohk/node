@@ -50,10 +50,10 @@
       "stdout"
     ]
   ],
-  "hasEKG": 12788,
+  "hasEKG": 12780,
   "hasPrometheus": [
     "127.0.0.1",
-    12798
+    12790
   ],
   "minSeverity": "Info",
   "options": {
