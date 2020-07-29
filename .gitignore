@@ -1,3 +1,5 @@
 db
 wallet-db
 pool-keys
+node.log
+node-*.log
