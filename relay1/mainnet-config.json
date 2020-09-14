@@ -160,7 +160,7 @@
   ],
   "setupScribes": [
     {
-      "scFormat": "ScText",
+      "scFormat": "ScJson",
       "scKind": "FileSK",
       "scName": "node.log",
       "scRotation": {
