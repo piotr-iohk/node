@@ -12,7 +12,7 @@
   "ShelleyGenesisFile": "mainnet-shelley-genesis.json",
   "ShelleyGenesisHash": "1a3be38bcbb7911969283716ad7aa550250226b76a61fc51cc9a9a35d9276d81",
   "TraceBlockFetchClient": false,
-  "TraceBlockFetchDecisions": false,
+  "TraceBlockFetchDecisions": true,
   "TraceBlockFetchProtocol": false,
   "TraceBlockFetchProtocolSerialised": false,
   "TraceBlockFetchServer": false,
@@ -40,20 +40,20 @@
   "TracingVerbosity": "NormalVerbosity",
   "TurnOnLogMetrics": true,
   "TurnOnLogging": true,
-  "ViewMode": "SimpleView",
+  "ViewMode": "LiveView",
   "defaultBackends": [
     "KatipBK"
   ],
   "defaultScribes": [
     [
-      "StdoutSK",
-      "stdout"
+      "FileSK",
+      "node.log"
     ]
   ],
-  "hasEKG": 12782,
+  "hasEKG": 12781,
   "hasPrometheus": [
     "127.0.0.1",
-    12792
+    12791
   ],
   "minSeverity": "Info",
   "options": {
@@ -160,10 +160,14 @@
   ],
   "setupScribes": [
     {
-      "scFormat": "ScText",
-      "scKind": "StdoutSK",
-      "scName": "stdout",
-      "scRotation": null
+      "scFormat": "ScJson",
+      "scKind": "FileSK",
+      "scName": "node.log",
+      "scRotation": {
+        "rpKeepFilesNum": 10,
+        "rpLogLimitBytes": 5000000,
+        "rpMaxAgeHours": 24
+      }
     }
   ]
 }
