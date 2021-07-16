@@ -1,1 +1,0 @@
-cardano-cli shelley query ledger-state --testnet-magic 42

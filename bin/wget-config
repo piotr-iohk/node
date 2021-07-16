@@ -1,7 +1,8 @@
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/$1-config.json
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/$1-byron-genesis.json
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/$1-shelley-genesis.json
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/$1-topology.json
+wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-config.json
+wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-byron-genesis.json
+wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-shelley-genesis.json
+wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-alonzo-genesis.json
+wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-topology.json
 
 cp *-config.json *-topology.json *-genesis.json ../relay1/
 cp *-config.json *-topology.json *-genesis.json ../relay2/
