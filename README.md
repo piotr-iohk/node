@@ -1,10 +1,7 @@
 # node + wallet set up on TESTNET
 
-1. You need to have `cardano-node` and `cardano-wallet` on your `$PATH`. You can get binaries for your OS from release page of each project in GH.
- - [Cardano-node releases](https://github.com/input-output-hk/cardano-node/releases)
- - [Cardano-wallet releases](https://github.com/input-output-hk/cardano-wallet/releases)
-> :information_source: Check out [compatibility matrix](https://github.com/input-output-hk/cardano-wallet#latest-releases) to make sure you have compatible versions of each.
->
+1. You need to have `cardano-node` and `cardano-wallet` on your `$PATH`. You can get binaries for your OS from [Cardano-wallet release page](https://github.com/input-output-hk/cardano-wallet/releases). Cardano-wallet release archive includes both `cardano-wallet` and `cardano-node` (also few other handy tools, like `cardano-cli`, `cardano-addresses` or `bech32`).
+
 
 2. Get configs:
 
