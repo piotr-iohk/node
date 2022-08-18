@@ -1,6 +1,6 @@
 cardano-wallet serve --port $1 \
   --node-socket ../$2/node.socket \
-  --testnet *-byron-genesis.json \
+  --testnet byron-genesis.json \
 #  --mainnet \
   --database ./wallet-db \
   --token-metadata-server https://metadata.cardano-testnet.iohkdev.io/ \

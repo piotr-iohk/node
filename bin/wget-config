@@ -1,13 +1,13 @@
-wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-config.json
-wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-byron-genesis.json
-wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-shelley-genesis.json
-wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-alonzo-genesis.json
-wget https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest/download/1/$1-topology.json
+wget https://book.world.dev.cardano.org/environments/$1/config.json
+wget https://book.world.dev.cardano.org/environments/$1/byron-genesis.json
+wget https://book.world.dev.cardano.org/environments/$1/shelley-genesis.json
+wget https://book.world.dev.cardano.org/environments/$1/alonzo-genesis.json
+wget https://book.world.dev.cardano.org/environments/$1/topology.json
 
-cp *-config.json *-topology.json *-genesis.json ../relay1/
-cp *-config.json *-topology.json *-genesis.json ../relay2/
-cp *-config.json *-topology.json *-genesis.json ../block-producing/
+cp config.json topology.json *-genesis.json ../relay1/
+cp config.json topology.json *-genesis.json ../relay2/
+cp config.json topology.json *-genesis.json ../block-producing/
 
 cp  *-genesis.json ../wallet/
 
-rm *-config.json *-topology.json *-genesis.json
+rm config.json topology.json *-genesis.json
